@@ -317,37 +317,18 @@
             position: relative;
         }
 
-        /* iPhone frame styling */
-        .screenshot::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            border-radius: 25px;
-            padding: 8px;
-            box-sizing: border-box;
-            z-index: -1;
-        }
-
-        .screenshot {
+        /* iPhone frame styling - only around the image */
+        .iphone-frame {
             position: relative;
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             border-radius: 25px;
             padding: 8px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            display: inline-block;
+            margin-bottom: 1rem;
         }
 
-        .screenshot-content {
-            background: white;
-            border-radius: 20px;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .screenshot img {
+        .iphone-frame img {
             width: 100%;
             max-width: 280px;
             height: auto;
@@ -572,42 +553,42 @@
             <h2 class="section-title">See Plottie in Action</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
-                    <div class="screenshot-content">
+                    <div class="iphone-frame">
                         <img src="plottiehome2.png" alt="Home Screen">
-                        <h4>Home Dashboard</h4>
                     </div>
+                    <h4>Home Dashboard</h4>
                 </div>
                 <div class="screenshot">
-                    <div class="screenshot-content">
+                    <div class="iphone-frame">
                         <img src="plottieaskplottie2.png" alt="Ask Plottie">
-                        <h4>AI Plant Analysis</h4>
                     </div>
+                    <h4>AI Plant Analysis</h4>
                 </div>
                 <div class="screenshot">
-                    <div class="screenshot-content">
+                    <div class="iphone-frame">
                         <img src="plottiemyplot2.png" alt="My Plot">
-                        <h4>My Plot</h4>
                     </div>
+                    <h4>My Plot</h4>
                 </div>
                 <div class="screenshot">
-                    <div class="screenshot-content">
+                    <div class="iphone-frame">
                         <img src="plottietimelines2.png" alt="Timelines">
-                        <h4>Timelines</h4>
                     </div>
+                    <h4>Timelines</h4>
                 </div>
             </div>
             <div class="screenshots-grid-row2">
                 <div class="screenshot">
-                    <div class="screenshot-content">
+                    <div class="iphone-frame">
                         <img src="plottiegrowing2.png" alt="Growing Periods">
-                        <h4>Growing Periods</h4>
                     </div>
+                    <h4>Growing Periods</h4>
                 </div>
                 <div class="screenshot">
-                    <div class="screenshot-content">
+                    <div class="iphone-frame">
                         <img src="plottiepests2.png" alt="Seasonal Pests">
-                        <h4>Seasonal Pests</h4>
                     </div>
+                    <h4>Seasonal Pests</h4>
                 </div>
             </div>
         </div>
