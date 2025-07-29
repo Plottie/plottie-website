@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Plottie - Your Smart Gardening Companion</title>
     <meta name="description" content="Plottie helps you grow better with AI-powered plant identification, care tips, and personalized gardening advice.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plottie.app/">
+    <meta property="og:title" content="Plottie - Your Smart Gardening Companion">
+    <meta property="og:description" content="Grow better with AI-powered plant identification, personalized care tips, and expert gardening advice.">
+    <meta property="og:image" content="https://plottie.app/plottielogo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://plottie.app/">
+    <meta property="twitter:title" content="Plottie - Your Smart Gardening Companion">
+    <meta property="twitter:description" content="Grow better with AI-powered plant identification, personalized care tips, and expert gardening advice.">
+    <meta property="twitter:image" content="https://plottie.app/plottielogo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="plottielogo.png">
+    <link rel="apple-touch-icon" href="plottielogo.png">
     <style>
         * {
             margin: 0;
@@ -17,6 +38,9 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
+            background: url('home-bg.png') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #f9f6e7; /* Fallback cream color */
         }
 
         /* Navigation */
@@ -26,9 +50,12 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 1rem 0;
+            padding: 0.75rem 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 70px;
+            display: flex;
+            align-items: center;
         }
 
         .nav-container {
@@ -44,6 +71,16 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #225830;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -53,6 +90,17 @@
         }
 
         .nav-links a {
+            color: #225830;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4a5568;
+        }
+
+        .hero {
             min-height: 100vh;
             background: linear-gradient(135deg, #e3e8cc 0%, #c9d1b5 100%);
             display: flex;
@@ -332,11 +380,11 @@
             <h1>Your Smart Gardening Companion</h1>
             <p>Grow better with AI-powered plant identification, personalized care tips, and expert gardening advice. Plottie makes gardening easier and more successful.</p>
             <div class="app-buttons">
-                <a href="#download" class="app-button app-store-button">
+                <a href="https://apps.apple.com/app/plottie" class="app-button app-store-button" target="_blank" rel="noopener">
                     <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/></svg>" alt="App Store">
                     Download on App Store
                 </a>
-                <a href="#download" class="app-button google-play-button">
+                <a href="https://play.google.com/store/apps/details?id=com.plottie.app" class="app-button google-play-button" target="_blank" rel="noopener">
                     <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z'/></svg>" alt="Google Play">
                     Get it on Google Play
                 </a>
@@ -375,7 +423,10 @@
                     <p>Detect plant diseases and pest problems early with AI-powered health analysis and treatment recommendations.</p>
                 </div>
                 <div class="feature-card">
-            </div>
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track your garden's growth with detailed analytics, harvest records, and seasonal performance insights.</p>
+                </div>
         </div>
     </section>
 
@@ -385,16 +436,16 @@
             <h2 class="section-title">See Plottie in Action</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><rect width='300' height='600' fill='%23e3e8cc'/><text x='150' y='300' text-anchor='middle' fill='%23225830' font-size='16'>Plant Identification Screen</text></svg>" alt="Plant Identification">
-                    <h4>Plant Identification</h4>
+                    <img src="plottiehome.png" alt="Home Screen">
+                    <h4>Home Dashboard</h4>
                 </div>
                 <div class="screenshot">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><rect width='300' height='600' fill='%23c9d1b5'/><text x='150' y='300' text-anchor='middle' fill='%23225830' font-size='16'>Garden Planning</text></svg>" alt="Garden Planning">
-                    <h4>Garden Planning</h4>
+                    <img src="askplottie.png" alt="Ask Plottie">
+                    <h4>AI Plant Analysis</h4>
                 </div>
                 <div class="screenshot">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><rect width='300' height='600' fill='%23a8b5a0'/><text x='150' y='300' text-anchor='middle' fill='%23225830' font-size='16'>Care Dashboard</text></svg>" alt="Care Dashboard">
-                    <h4>Care Dashboard</h4>
+                    <img src="plottiemyplot.png" alt="My Plot">
+                    <h4>My Garden Plot</h4>
                 </div>
             </div>
         </div>
@@ -406,11 +457,11 @@
             <h2>Start Growing Smarter Today</h2>
             <p>Join thousands of gardeners who trust Plottie to help them grow better plants</p>
             <div class="app-buttons">
-                <a href="#" class="app-button app-store-button">
+                <a href="https://apps.apple.com/app/plottie" class="app-button app-store-button" target="_blank" rel="noopener">
                     <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/></svg>" alt="App Store">
                     Download on App Store
                 </a>
-                <a href="#" class="app-button google-play-button">
+                <a href="https://play.google.com/store/apps/details?id=com.plottie.app" class="app-button google-play-button" target="_blank" rel="noopener">
                     <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z'/></svg>" alt="Google Play">
                     Get it on Google Play
                 </a>
