@@ -38,6 +38,8 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
             background: url('home-bg.png') no-repeat center center fixed;
             background-size: cover;
             background-color: #f9f6e7; /* Fallback cream color */
@@ -56,6 +58,7 @@
             height: 70px;
             display: flex;
             align-items: center;
+            overflow: hidden;
         }
 
         .nav-container {
@@ -87,6 +90,13 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+            padding: 0;
         }
 
         .nav-links a {
@@ -94,6 +104,9 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            display: block;
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
