@@ -291,6 +291,16 @@
             margin-right: auto;
         }
 
+        .screenshots-grid-row2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .screenshot {
             background: white;
             border-radius: 20px;
@@ -334,7 +344,7 @@
 
         /* Footer */
         .footer {
-            background: #225830;
+            background: #1a3d1f;
             color: white;
             padding: 3rem 2rem;
             text-align: center;
@@ -349,19 +359,21 @@
         }
 
         .footer-section h3 {
-            color: #225830;
+            color: #ffffff;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .footer-section a {
-            color: #cbd5e0;
+            color: #e2e8f0;
             text-decoration: none;
             display: block;
             margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #ffffff;
         }
 
         /* Animations */
@@ -405,6 +417,11 @@
                 gap: 1rem;
             }
 
+            .screenshots-grid-row2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
             .screenshot h4 {
                 font-size: 1.1rem;
             }
@@ -415,10 +432,19 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
             }
+
+            .screenshots-grid-row2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
             .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshots-grid-row2 {
                 grid-template-columns: 1fr;
             }
         }
@@ -519,6 +545,16 @@
                     <h4>Timelines</h4>
                 </div>
             </div>
+            <div class="screenshots-grid-row2">
+                <div class="screenshot">
+                    <img src="plottiegrowing2.png" alt="Growing Periods">
+                    <h4>Growing Periods</h4>
+                </div>
+                <div class="screenshot">
+                    <img src="plottiepests2.png" alt="Seasonal Pests">
+                    <h4>Seasonal Pests</h4>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -559,7 +595,7 @@
                 <a href="terms-conditions.html">Terms of Service</a>
             </div>
         </div>
-        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #4a5568; text-align: center;">
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #2d3748; text-align: center;">
             <p>&copy; 2025 Plottie. All rights reserved.</p>
         </div>
     </footer>
