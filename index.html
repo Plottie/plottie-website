@@ -164,28 +164,10 @@
             font-weight: 600;
             white-space: nowrap;
         }
-        .appstore-desktop-help .qr {
-            width: 96px;
-            height: 96px;
-            background: #fff;
-            border-radius: 8px;
-            padding: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
         .appstore-desktop-help .help-text {
             font-size: 0.95rem;
             color: #4a5568;
         }
-        .appstore-desktop-help .copy-btn {
-            border: 1px solid #cbd5e0;
-            background: #fff;
-            color: #225830;
-            border-radius: 8px;
-            padding: 0.5rem 0.75rem;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        .appstore-desktop-help .copy-btn:hover { background: #f7fafc; }
         .desktop-only { display: flex; }
         @media (max-width: 768px) { .desktop-only { display: none; } }
 
@@ -570,9 +552,7 @@
                 </a>
                 <div class="desktop-only appstore-desktop-help" aria-hidden="true">
                     <span class="badge">iPhone only</span>
-                    <img class="qr" id="qr-hero" alt="QR code to open App Store link on your phone" />
-                    <span class="help-text">On a computer? Scan the code with your phone or</span>
-                    <button class="copy-btn" type="button" data-copy="https://apps.apple.com/gb/app/id6749132762">Copy App Store link</button>
+                    <span class="help-text">On a computer? Search for 'Plottie' on your phone on the App Store.</span>
                 </div>
             </div>
         </div>
@@ -678,9 +658,7 @@
                 </a>
                 <div class="desktop-only appstore-desktop-help" aria-hidden="true">
                     <span class="badge">iPhone only</span>
-                    <img class="qr" id="qr-cta" alt="QR code to open App Store link on your phone" />
-                    <span class="help-text">On a computer? Scan the code with your phone or</span>
-                    <button class="copy-btn" type="button" data-copy="https://apps.apple.com/gb/app/id6749132762">Copy App Store link</button>
+                    <span class="help-text">On a computer? Search for 'Plottie' on your phone on the App Store.</span>
                 </div>
             </div>
         </div>
@@ -714,38 +692,7 @@
         </div>
     </footer>
 
-    <script>
-      (function(){
-        const APP_STORE_URL = 'https://apps.apple.com/gb/app/id6749132762';
-        const QR_SIZE = 192; // retina crispness, CSS scales to 96px
-        const qrSrc = (url) => `https://api.qrserver.com/v1/create-qr-code/?size=${QR_SIZE}x${QR_SIZE}&data=${encodeURIComponent(url)}`;
-
-        const hero = document.getElementById('qr-hero');
-        if (hero) { hero.src = qrSrc(APP_STORE_URL); }
-        const cta = document.getElementById('qr-cta');
-        if (cta) { cta.src = qrSrc(APP_STORE_URL); }
-
-        // Copy buttons
-        document.querySelectorAll('.copy-btn').forEach(btn => {
-          btn.addEventListener('click', async () => {
-            const url = btn.getAttribute('data-copy');
-            try {
-              if (navigator.clipboard && navigator.clipboard.writeText) {
-                await navigator.clipboard.writeText(url);
-              } else {
-                const input = document.createElement('input');
-                input.value = url; document.body.appendChild(input); input.select(); document.execCommand('copy'); document.body.removeChild(input);
-              }
-              const prev = btn.textContent;
-              btn.textContent = 'Copied!';
-              setTimeout(() => { btn.textContent = prev; }, 1800);
-            } catch (_) {
-              alert('Copy the link: ' + url);
-            }
-          });
-        });
-      })();
-    </script>
+    
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
