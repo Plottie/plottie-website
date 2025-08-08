@@ -40,7 +40,7 @@
             overflow-x: hidden;
             margin: 0;
             padding: 0;
-            background: url('home-bg.png') no-repeat center center fixed;
+            background: url('home-bg.png') no-repeat center center;
             background-size: cover;
             background-color: #f9f6e7; /* Fallback cream color */
         }
@@ -411,6 +411,12 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                background: url('home-bg.png') no-repeat center center;
+                background-size: cover;
+                background-attachment: scroll; /* Better performance on mobile */
+            }
+
             .nav-links {
                 display: none;
             }
@@ -461,12 +467,28 @@
         }
 
         @media (max-width: 480px) {
+            body {
+                background: url('home-bg.png') no-repeat center center;
+                background-size: cover;
+                background-attachment: scroll;
+                background-position: center 20%; /* Slightly adjust position for mobile */
+            }
+
             .screenshots-grid {
                 grid-template-columns: 1fr;
             }
 
             .screenshots-grid-row2 {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 375px) {
+            body {
+                background: url('home-bg.png') no-repeat center center;
+                background-size: cover;
+                background-attachment: scroll;
+                background-position: center 25%; /* Optimized for smaller screens */
             }
         }
 
