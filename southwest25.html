@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Plottie for Southwest Allotments - 25% Off</title>
+    <meta name="description" content="Special offer for Southwest UK allotment holders - Get Plottie, your smart growing companion, with 25% off.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grow.plottie.app/southwest25">
+    <meta property="og:title" content="Plottie for Southwest Allotments - 25% Off">
+    <meta property="og:description" content="Special offer for Southwest UK allotment holders - Get Plottie with 25% off.">
+    <meta property="og:image" content="https://plottie.app/plottielogo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://grow.plottie.app/southwest25">
+    <meta property="twitter:title" content="Plottie for Southwest Allotments - 25% Off">
+    <meta property="twitter:description" content="Special offer for Southwest UK allotment holders - Get Plottie with 25% off.">
+    <meta property="twitter:image" content="https://plottie.app/plottielogo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="plottielogo.png">
+    <link rel="apple-touch-icon" href="plottielogo.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: url('home-bg.png') no-repeat top center;
+            background-size: 100% auto;
+            background-color: #f9f6e7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+            max-width: 360px;
+            object-fit: contain;
+        }
+
+        .offer-badge {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: #225830;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .region-highlight {
+            background: rgba(34, 88, 48, 0.1);
+            border-left: 4px solid #225830;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .region-highlight h3 {
+            color: #225830;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .region-highlight p {
+            color: #4a5568;
+            margin: 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            color: #225830;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card img {
+            margin-top: auto;
+            align-self: center;
+            width: 100%;
+            max-width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 3rem 0;
+            background: transparent;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .screenshot {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .screenshot img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot h4 {
+            color: #225830;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #225830 0%, #336633 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(34, 88, 48, 0.3);
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .app-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 250px;
+            justify-content: center;
+        }
+
+        .app-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .app-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .qr-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .qr-section h4 {
+            color: #225830;
+            margin-bottom: 1rem;
+        }
+
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 0 auto 1rem;
+        }
+
+        .copy-btn {
+            background: #225830;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #1a3d1f;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #225830;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .screenshots-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .app-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="plottielogo.png" alt="Plottie Logo">
+        </div>
+
+        <!-- Special Offer Badge -->
+        <div class="offer-badge">
+            🎉 SPECIAL OFFER: 50% OFF FOR 3 MONTHS 🎉
+        </div>
+
+        <!-- Hero Section -->
+        <h1 class="hero-title">Southwest Growers Special</h1>
+        <p class="subtitle">
+            Exclusive offer for growers in the southwest of the UK. Get Plottie, your smart growing companion, 
+            and take your growing to the next level with AI-powered insights and personalised care.
+        </p>
+
+
+
+        <!-- Key Features -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h4>Smart Planning</h4>
+                <p>Plan your Southwest garden with seasonal recommendations and companion planting advice.</p>
+                <img src="Screenshots/plottietimelines3.png" alt="Timelines">
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💧</div>
+                <h4>Care Reminders</h4>
+                <p>Never forget to water or harvest with personalised schedules and notifications.</p>
+                <img src="Screenshots/plottiemyplot3.png" alt="My Plot">
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌦️</div>
+                <h4>Local Weather</h4>
+                <p>Get weather-aware gardening advice tailored to Southwest conditions.</p>
+                <img src="plottiehome2.png" alt="Home Dashboard">
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🩺</div>
+                <h4>Health Monitoring</h4>
+                <p>Detect plant diseases and pest problems early with AI-powered analysis.</p>
+                <img src="plottieaskplottie2.png" alt="AI Plant Analysis">
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 class="cta-title">Start Growing Smarter Today</h2>
+            <p class="cta-subtitle">Join fellow growers in the southwest who trust Plottie to help them grow better plants</p>
+            
+            <div class="download-section">
+                <a href="https://apps.apple.com/gb/app/id6749132762" class="app-button" target="_blank" rel="noopener">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/></svg>" alt="App Store">
+                    Download on App Store
+                </a>
+                
+                <div class="qr-section">
+                    <h4>📱 Scan to Download</h4>
+                    <img class="qr-code" id="qr-code" alt="QR code to open App Store link on your phone" />
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;">
+                        On a computer? Scan the code with your phone or
+                    </p>
+                    <button class="copy-btn" type="button" data-copy="https://apps.apple.com/gb/app/id6749132762">
+                        Copy App Store Link
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                🌱 <strong>Plottie</strong> - Your smart growing companion<br>
+                <a href="https://grow.plottie.app">grow.plottie.app</a> | 
+                <a href="https://grow.plottie.app/contact.html">Contact</a> | 
+                <a href="https://grow.plottie.app/privacy-policy.html">Privacy</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                * Offer valid for Southwest UK allotment holders. Terms apply.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // QR Code generation
+        const APP_STORE_URL = 'https://apps.apple.com/gb/app/id6749132762';
+        const QR_SIZE = 300; // retina size; CSS shows 150px
+        const qrSrc = (url) => `https://api.qrserver.com/v1/create-qr-code/?size=${QR_SIZE}x${QR_SIZE}&data=${encodeURIComponent(url)}`;
+
+        const qrCode = document.getElementById('qr-code');
+        if (qrCode) { 
+            qrCode.src = qrSrc(APP_STORE_URL); 
+        }
+
+        // Copy button functionality
+        document.querySelector('.copy-btn').addEventListener('click', async () => {
+            const url = document.querySelector('.copy-btn').getAttribute('data-copy');
+            try {
+                if (navigator.clipboard?.writeText) {
+                    await navigator.clipboard.writeText(url);
+                } else {
+                    const input = document.createElement('input');
+                    input.value = url; 
+                    document.body.appendChild(input); 
+                    input.select(); 
+                    document.execCommand('copy'); 
+                    document.body.removeChild(input);
+                }
+                const btn = document.querySelector('.copy-btn');
+                const prev = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = prev; }, 1600);
+            } catch {
+                alert('Copy the link: ' + url);
+            }
+        });
+    </script>
+</body>
+</html> 
